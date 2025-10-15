@@ -31,14 +31,13 @@ int main() {
         mostrarMenu();
         std::cin >> opcion;
         
-        if (std::cin.fail()) {
-            limpiarBuffer();
-            std::cout << "Opcion invalida. Por favor ingrese un numero." << std::endl;
-            continue;
-        }
-        
+        std::cin >> opcion;
+    if (std::cin.fail()) {
         limpiarBuffer();
-        
+        std::cout << "Opcion invalida. Por favor ingrese un numero." << std::endl;
+    } else {
+        limpiarBuffer();
+          
         switch (opcion) {
             case 1: {
                 tienda.mostrarTodosProductos();
